@@ -1,0 +1,11 @@
+<div class="home">
+    <ng-container *ngIf="posts.length; else nodata" >
+    <app-blog-post *ngFor="let item of posts"
+      [title]="item?.name"
+      [content]="item?.summary">
+    </app-blog-post>
+</ng-container>
+<ng-template #nodata>
+    <div class="no-data-found">No data found</div>
+</ng-template>
+</div>
